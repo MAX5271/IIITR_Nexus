@@ -9,8 +9,6 @@ import 'package:iiitrnexus1/core/providers.dart';
 import 'package:iiitrnexus1/core/type_def.dart';
 import 'package:iiitrnexus1/models/user_modle.dart';
 
-final userProvider = Provider((ref) => null);
-
 final authRepositoryProvider = Provider((ref) => AuthRepository(
     firestore: ref.read(fireStoreProvider),
     auth: ref.read(authProvider),
@@ -42,7 +40,7 @@ class AuthRepository {
         idToken: googleAuth?.idToken,
         accessToken: googleAuth?.accessToken,
       );
-      late UserModel userModel;
+      UserModel userModel;
 
       UserCredential userCredential =
           await _auth.signInWithCredential(credential);
