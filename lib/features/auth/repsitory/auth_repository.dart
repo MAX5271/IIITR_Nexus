@@ -35,6 +35,7 @@ class AuthRepository {
   FutureEither<UserModel> signInWithGoogle() async {
     try {
       await _googleSignIn.signOut();
+      await _auth.signOut();
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
       final googleAuth = (await googleUser?.authentication);
@@ -51,6 +52,7 @@ class AuthRepository {
       if (userCredential.additionalUserInfo!.isNewUser) {
         userModel = UserModel(
             name: userCredential.user!.displayName ?? 'Untitled',
+            email: userCredential.user!.email ?? 'nouser@nullprovider',
             profilePic:
                 userCredential.user!.photoURL ?? 'assets/defaultAvtar.jpg',
             banner: 'assets/defaultBanner.jpg',
