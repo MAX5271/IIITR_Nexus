@@ -173,7 +173,8 @@ class SignIn extends ConsumerWidget {
                                     children: [
                                       Padding(
                                         padding: EdgeInsets.symmetric(
-                                            horizontal: 3.0),
+                                          horizontal: 3.0,
+                                        ),
                                         child: SizedBox(
                                           height: 30,
                                           child: Image(
