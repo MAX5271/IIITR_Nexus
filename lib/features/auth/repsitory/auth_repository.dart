@@ -34,6 +34,7 @@ class AuthRepository {
 
   FutureEither<UserModel> signInWithGoogle() async {
     try {
+      await _googleSignIn.signOut();
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
       final googleAuth = (await googleUser?.authentication);
