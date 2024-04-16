@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891516759798",
+    "project_id": "iiitr-nexus",
+    "storage_bucket": "iiitr-nexus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891516759798:android:58449279b1260578c0c6d7",
+        "android_client_info": {
+          "package_name": "com.example.iiitrnexus1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2TJebC3kFPE8iZuVZTzYYKzU-M4LYCik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
