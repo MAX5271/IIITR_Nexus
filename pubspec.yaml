@@ -48,6 +48,7 @@ dependencies:
   filepicker_windows: ^2.1.2
   file_picker: ^8.0.0+1
   riverpod: ^2.5.1
+  routemaster: ^1.0.1
 
 dev_dependencies:
   flutter_test:
