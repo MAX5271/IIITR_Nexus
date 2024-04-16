@@ -44,6 +44,7 @@ class _MyAppState extends ConsumerState<MyApp> {
   Widget build(BuildContext context) {
     return ref.watch(authStateChangeProvider).when(
           data: (data) => MaterialApp.router(
+            // theme: ThemeData.dark(useMaterial3: true),
             debugShowCheckedModeBanner: false,
             title: 'IIITR Nexus',
             routerDelegate: RoutemasterDelegate(
