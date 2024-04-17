@@ -10,7 +10,7 @@ import 'package:iiitrnexus1/core/type_def.dart';
 import 'package:iiitrnexus1/models/user_modle.dart';
 
 final authRepositoryProvider = Provider((ref) => AuthRepository(
-    firestore: ref.read(fireStoreProvider),
+    firestore: ref.read(firestoreProvider),
     auth: ref.read(authProvider),
     googleSignIn: ref.read(googleSignInProvider)));
 

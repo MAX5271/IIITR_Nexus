@@ -6,11 +6,14 @@ import 'package:iiitrnexus1/features/common/textfield.dart';
 // import 'package:lottie/lottie.dart';
 
 class SignIn extends ConsumerWidget {
-  const SignIn({super.key});
+  SignIn({super.key});
 
   void signInWithGoogle(BuildContext context, WidgetRef ref) {
     ref.read(authControllerProvider.notifier).signInWithGoogle(context);
   }
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -77,7 +80,7 @@ class SignIn extends ConsumerWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                        child: CustomTextField(hintText: "Enter College ID"),
+                        child: CustomTextField(hintText: "Enter College ID", controller: emailController,),
                       ),
                       const SizedBox(
                         height: 10,
@@ -97,7 +100,7 @@ class SignIn extends ConsumerWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                        child: CustomTextField(hintText: "Enter your password"),
+                        child: CustomTextField(hintText: "Enter your password", controller: passwordController,),
                       ),
                       const SizedBox(
                         height: 10,
