@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iiitrnexus1/features/auth/screens/signin.dart';
 import 'package:iiitrnexus1/features/community/screens/community_screens.dart';
 import 'package:iiitrnexus1/features/community/screens/create_community_screen.dart';
+import 'package:iiitrnexus1/features/community/screens/mod_tools_screen.dart';
 import 'package:iiitrnexus1/features/home/screens/homescreen.dart';
 import 'package:routemaster/routemaster.dart';
 
@@ -18,9 +19,10 @@ final loggedInRoute = RouteMap(routes: {
   '/create-community': (_) => const MaterialPage(
         child: CreateCommunityScreen(),
       ),
-   '/r/:name': (route) => MaterialPage(
-          child: CommunityScreen(
-            name: route.pathParameters['name']!,
-          ),
+  '/r/:name': (route) => MaterialPage(
+        child: CommunityScreen(
+          name: route.pathParameters['name']!,
         ),
+      ),
+  '/mod-tools': (_) => const MaterialPage(child: ModToolsScreen())
 });
