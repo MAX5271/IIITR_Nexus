@@ -51,9 +51,10 @@ class AuthRepository {
       if (userCredential.additionalUserInfo!.isNewUser) {
         userModel = UserModel(
             name: userCredential.user!.displayName ?? 'Untitled',
-            profilePic:
-                userCredential.user!.photoURL ?? 'assets/defaultAvtar.jpg',
-            banner: 'assets/defaultBanner.jpg',
+            profilePic: userCredential.user!.photoURL ??
+                'https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg',
+            banner:
+                'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
             uid: userCredential.user!.uid,
             isAuthenticated: true);
         await _users.doc(userModel.uid).set(userModel.toMap());

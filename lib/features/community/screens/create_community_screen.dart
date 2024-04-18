@@ -3,15 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iiitrnexus1/features/common/loader.dart';
 import 'package:iiitrnexus1/features/common/textfield.dart';
 import 'package:iiitrnexus1/features/community/controller/community_controller.dart';
-import 'package:iiitrnexus1/features/community/repository/community_repository.dart';
-
-final communityControllerProvider =
-    StateNotifierProvider<CommunityController, bool>((ref) {
-  final communityRepository = ref.watch(communityRepositoryProvider);
-
-  return CommunityController(
-      communityRepository: communityRepository, ref: ref);
-});
 
 class CreateCommunityScreen extends ConsumerStatefulWidget {
   const CreateCommunityScreen({super.key});

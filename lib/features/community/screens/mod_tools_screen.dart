@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:iiitrnexus1/features/community/screens/edit_community.dart';
+import 'package:routemaster/routemaster.dart';
 
 class ModToolsScreen extends StatelessWidget {
-  const ModToolsScreen({super.key});
+  final String name;
+
+  void navigateToEditCommunity(BuildContext context) {
+    Routemaster.of(context).push('/edit-community/$name');
+  }
+
+  const ModToolsScreen({required this.name, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +27,7 @@ class ModToolsScreen extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.edit),
             title: Text("Edit Community"),
-            onTap: () {},
+            onTap: () => navigateToEditCommunity(context),
           ),
         ],
       ),

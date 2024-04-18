@@ -12,7 +12,7 @@ class CommunityScreen extends ConsumerWidget {
   final String name;
 
   void navigateToModTools(BuildContext context) {
-    Routemaster.of(context).push('/mod-tools');
+    Routemaster.of(context).push('/mod-tools/$name');
   }
 
   const CommunityScreen({required this.name, super.key});
@@ -26,7 +26,7 @@ class CommunityScreen extends ConsumerWidget {
             data: (community) => NestedScrollView(
                 headerSliverBuilder: (context, innerBoxIsScrolled) {
                   return [
-                    const SliverAppBar(
+                    SliverAppBar(
                       floating: true,
                       snap: true,
                       expandedHeight: 150,
@@ -34,7 +34,7 @@ class CommunityScreen extends ConsumerWidget {
                         children: [
                           Positioned.fill(
                             child: Image(
-                              image: AssetImage('assets/defaultBanner.jpg'),
+                              image: NetworkImage(community.banner),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -49,7 +49,7 @@ class CommunityScreen extends ConsumerWidget {
                             Align(
                               alignment: Alignment.topLeft,
                               child: CircleAvatar(
-                                backgroundImage: AssetImage(community.avatar),
+                                backgroundImage: NetworkImage(community.avatar),
                                 radius: 35,
                               ),
                             ),

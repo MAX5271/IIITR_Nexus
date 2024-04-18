@@ -46,9 +46,10 @@ dependencies:
   html: ^0.15.4
   fpdart: ^1.1.0
   filepicker_windows: ^2.1.2
-  file_picker: ^8.0.0+1
+  file_picker: ^8.0.1
   riverpod: ^2.5.1
   routemaster: ^1.0.1
+  dotted_border: ^2.1.0
 
 dev_dependencies:
   flutter_test:

@@ -36,12 +36,12 @@ class CommunityListDrawer extends ConsumerWidget {
                         final community = communities[index];
                         return ListTile(
                           leading: CircleAvatar(
-                            backgroundImage: AssetImage(community.avatar),
+                            backgroundImage: NetworkImage(community.avatar),
                           ),
                           title: Text(community.name),
                           onTap: () {
                             navigateToCommunity(context, community);
-                            Routemaster.of(context).pop();
+                            // Routemaster.of(context).pop();
                           },
                         );
                       },
